@@ -1,0 +1,43 @@
+schema: xgc2.product.v1
+id: xgc2-h1-description
+name: XGC2 Unitree H1 Description
+version: 0.1.0-1
+kind: ros1-apt
+summary: ROS Noetic visual description assets for Unitree H1.
+groups:
+- ros1
+- robot
+- description
+ros:
+  distro: noetic
+  packages:
+  - h1_description
+apt:
+  distribution: focal
+  install:
+  - ros-noetic-xgc2-h1-description
+  packages:
+  - ros-noetic-xgc2-h1-description
+  package_architectures:
+    ros-noetic-xgc2-h1-description:
+    - amd64
+    - arm64
+  depends:
+  - ros-noetic-urdf
+usage:
+  install: |
+    sudo apt update
+    sudo apt install ros-noetic-xgc2-h1-description
+  smoke_test: |
+    rospack find h1_description
+    test -f /opt/ros/noetic/share/h1_description/urdf/h1_visual.urdf
+ownership:
+  paths:
+  - /opt/ros/noetic/share/h1_description
+release:
+  repository: XGC-Team/xgc2-h1-description
+  ref: noetic
+  workflow: release.yml
+  ci_workflow: ci.yml
+  apt_versions:
+    focal: 0.1.0-1
