@@ -1,16 +1,18 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-source /opt/ros/noetic/setup.bash
+source /opt/ros/jazzy/setup.bash
 set -u
 
-dpkg -s ros-noetic-xgc2-h1-description >/dev/null
-package_path="$(rospack find h1_description)"
-test "${package_path}" = /opt/ros/noetic/share/h1_description
+dpkg -s ros-jazzy-xgc2-h1-description >/dev/null
+package_prefix="$(ros2 pkg prefix h1_description)"
+test "${package_prefix}" = /opt/ros/jazzy
+package_path="${package_prefix}/share/h1_description"
 test -f "${package_path}/meshes/pelvis.STL"
 test -f "${package_path}/meshes/left_hip_yaw_link.STL"
 test -f "${package_path}/urdf/h1_visual.urdf"
 test -f "${package_path}/ASSET_SHA256SUMS"
+test -f /opt/ros/jazzy/share/ament_index/resource_index/packages/h1_description
 
 (
   cd "${package_path}"

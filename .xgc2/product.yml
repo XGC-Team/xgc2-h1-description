@@ -1,43 +1,46 @@
 schema: xgc2.product.v1
-id: xgc2-h1-description
-name: XGC2 Unitree H1 Description
+id: xgc2-ros-jazzy-h1-description
+name: XGC2 Unitree H1 Description for ROS Jazzy
 version: 0.1.0-1
-kind: ros1-apt
-summary: ROS Noetic visual description assets for Unitree H1.
+kind: ros2-apt
+summary: ROS Jazzy visual description assets for Unitree H1.
 groups:
-- ros1
+- ros2
 - robot
 - description
 ros:
-  distro: noetic
+  distro: jazzy
   packages:
   - h1_description
 apt:
-  distribution: focal
+  distribution: noble
   install:
-  - ros-noetic-xgc2-h1-description
+  - ros-jazzy-xgc2-h1-description
   packages:
-  - ros-noetic-xgc2-h1-description
+  - ros-jazzy-xgc2-h1-description
   package_architectures:
-    ros-noetic-xgc2-h1-description:
+    ros-jazzy-xgc2-h1-description:
     - amd64
     - arm64
   depends:
-  - ros-noetic-urdf
+  - ros-jazzy-urdf
 usage:
   install: |
     sudo apt update
-    sudo apt install ros-noetic-xgc2-h1-description
+    sudo apt install ros-jazzy-xgc2-h1-description
   smoke_test: |
-    rospack find h1_description
-    test -f /opt/ros/noetic/share/h1_description/urdf/h1_visual.urdf
+    ros2 pkg prefix h1_description
+    test -f /opt/ros/jazzy/share/h1_description/urdf/h1_visual.urdf
 ownership:
   paths:
-  - /opt/ros/noetic/share/h1_description
+  - /opt/ros/jazzy/share/h1_description
+  - /opt/ros/jazzy/share/ament_index/resource_index/packages/h1_description
+  - /opt/ros/jazzy/share/ament_index/resource_index/package_run_dependencies/h1_description
+  - /opt/ros/jazzy/share/ament_index/resource_index/parent_prefix_path/h1_description
 release:
   repository: XGC-Team/xgc2-h1-description
-  ref: noetic
+  ref: jazzy
   workflow: release.yml
   ci_workflow: ci.yml
   apt_versions:
-    focal: 0.1.0-1
+    noble: 0.1.0-1

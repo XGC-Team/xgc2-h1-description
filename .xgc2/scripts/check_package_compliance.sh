@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-grep -q '^id: xgc2-h1-description$' .xgc2/product.yml
+grep -q '^id: xgc2-ros-jazzy-h1-description$' .xgc2/product.yml
 grep -q '^version: 0.1.0-1$' .xgc2/product.yml
-grep -q '^kind: ros1-apt$' .xgc2/product.yml
-grep -q '^  distro: noetic$' .xgc2/product.yml
-grep -q '^  distribution: focal$' .xgc2/product.yml
-grep -q 'ros-noetic-xgc2-h1-description' .xgc2/product.yml
+grep -q '^kind: ros2-apt$' .xgc2/product.yml
+grep -q '^  distro: jazzy$' .xgc2/product.yml
+grep -q '^  distribution: noble$' .xgc2/product.yml
+grep -q 'ros-jazzy-xgc2-h1-description' .xgc2/product.yml
 grep -q '<name>h1_description</name>' package.xml
-grep -q '<buildtool_depend>catkin</buildtool_depend>' package.xml
+grep -q '<buildtool_depend>ament_cmake</buildtool_depend>' package.xml
+grep -q '<build_type>ament_cmake</build_type>' package.xml
 grep -q '^project(h1_description)$' CMakeLists.txt
 test -f urdf/h1_visual.urdf
 test -f meshes/pelvis.STL

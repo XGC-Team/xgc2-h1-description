@@ -3,10 +3,10 @@ set -euo pipefail
 
 INSTALL_ROOT=""
 OUTPUT_DIR=""
-ROS_DISTRO="noetic"
+ROS_DISTRO="jazzy"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
-PACKAGE="ros-noetic-xgc2-h1-description"
+PACKAGE="ros-jazzy-xgc2-h1-description"
 ROS_PACKAGE="h1_description"
 
 product_version() {
@@ -62,6 +62,19 @@ fi
 mkdir -p "${PKG_ROOT}${PREFIX}/share"
 cp -a "${PREFIX_ROOT}/share/${ROS_PACKAGE}" "${PKG_ROOT}${PREFIX}/share/"
 
+AMENT_RESOURCE_ROOT="${PREFIX_ROOT}/share/ament_index/resource_index"
+PACKAGE_MARKER="${AMENT_RESOURCE_ROOT}/packages/${ROS_PACKAGE}"
+if [[ ! -f "${PACKAGE_MARKER}" ]]; then
+  echo "ament package marker is missing: ${PACKAGE_MARKER}" >&2
+  exit 1
+fi
+
+while IFS= read -r -d '' resource; do
+  relative="${resource#${INSTALL_ROOT}}"
+  mkdir -p "${PKG_ROOT}$(dirname "${relative}")"
+  cp -a "${resource}" "${PKG_ROOT}${relative}"
+done < <(find "${AMENT_RESOURCE_ROOT}" -type f -name "${ROS_PACKAGE}" -print0)
+
 cat >"${PKG_ROOT}/DEBIAN/control" <<EOF
 Package: ${PACKAGE}
 Version: ${VERSION}
@@ -69,7 +82,7 @@ Section: misc
 Priority: optional
 Architecture: ${ARCH}
 Maintainer: XGC2 <apt@example.com>
-Depends: ros-noetic-urdf
+Depends: ros-jazzy-urdf
 Description: XGC2 Unitree B2 and ARX R5a visual description assets
 EOF
 

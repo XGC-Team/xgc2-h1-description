@@ -144,7 +144,7 @@ jobs:
       - name: Build and install-check deb package
         run: |
           .xgc2/scripts/build_debs_in_docker.sh \
-            --work-dir "$RUNNER_TEMP/xgc2-h1-description-release-${{ matrix.arch }}" \
+            --work-dir "$RUNNER_TEMP/xgc2-ros-jazzy-h1-description-release-${{ matrix.arch }}" \
             --output-dir "$GITHUB_WORKSPACE/debs"
 
       - name: Create release-train build manifest
@@ -152,9 +152,9 @@ jobs:
           python3 .xgc2/scripts/xgc2_artifact_manifest.py build \
             --deb-dir debs \
             --output-dir .ci/build-manifests \
-            --product xgc2-h1-description \
+            --product xgc2-ros-jazzy-h1-description \
             --product-version "${{ inputs.expected_version }}" \
-            --distribution focal \
+            --distribution noble \
             --architecture "${{ matrix.arch }}" \
             --source-sha "${{ inputs.expected_source_sha }}" \
             --ci-run-id "$GITHUB_RUN_ID" \
@@ -165,7 +165,7 @@ jobs:
         if: ${{ inputs.prepare_action == 'release' }}
         uses: actions/upload-artifact@v4
         with:
-          name: xgc2-h1-description-release-debs-${{ matrix.arch }}
+          name: xgc2-ros-jazzy-h1-description-release-debs-${{ matrix.arch }}
           path: |
             debs/*.deb
             .ci/build-manifests/*.json

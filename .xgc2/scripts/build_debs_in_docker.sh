@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 
-DOCKER_IMAGE="${DOCKER_IMAGE:-ghcr.io/xgc-team/xgc2-images/xgc2-build-focal-ros-noetic:1.0.0}"
+DOCKER_IMAGE="${DOCKER_IMAGE:-ghcr.io/xgc-team/xgc2-images/xgc2-build-noble-ros-jazzy:1.0.0}"
 WORK_DIR="${WORK_DIR:-${REPO_ROOT}/.work/docker}"
 OUTPUT_DIR="${OUTPUT_DIR:-${REPO_ROOT}/debs}"
 INSTALL_CHECK="${INSTALL_CHECK:-true}"
@@ -48,21 +48,24 @@ docker run --rm -e XGC2_APT_OVERLAY_URL="${XGC2_APT_OVERLAY_URL:-}" -e DEBIAN_FR
       exit 1
     fi
 
-    rm -rf /workspace/work/build /workspace/work/devel /workspace/work/install-root /workspace/work/src
+    rm -rf /workspace/work/build /workspace/work/install /workspace/work/install-root /workspace/work/log /workspace/work/src /workspace/work/stage-build
     mkdir -p /workspace/work/src/h1_description
     rsync -a --delete /workspace/repo/ /workspace/work/src/h1_description/
 
     cd /workspace/work
-    source /opt/ros/noetic/setup.bash
-    catkin_make -DCATKIN_ENABLE_TESTING=ON
-    catkin_make run_tests
-    catkin_test_results --verbose
-    DESTDIR=/workspace/work/install-root catkin_make install -DCMAKE_INSTALL_PREFIX=/opt/ros/noetic -DCATKIN_ENABLE_TESTING=OFF
+    set +u
+    source /opt/ros/jazzy/setup.bash
+    set -u
+    colcon build --packages-select h1_description --cmake-args -DBUILD_TESTING=ON
+    colcon test --packages-select h1_description
+    colcon test-result --verbose
+    cmake -S /workspace/work/src/h1_description -B /workspace/work/stage-build -DCMAKE_INSTALL_PREFIX=/opt/ros/jazzy -DBUILD_TESTING=OFF
+    DESTDIR=/workspace/work/install-root cmake --build /workspace/work/stage-build --target install
 
     /workspace/repo/.xgc2/scripts/package_debs.sh --install-root /workspace/work/install-root --output-dir /workspace/out
 
     if [[ "${INSTALL_CHECK}" == "true" ]]; then
-      apt-get install -y /workspace/out/ros-noetic-xgc2-h1-description_*.deb
+      apt-get install -y /workspace/out/ros-jazzy-xgc2-h1-description_*.deb
       env -i PATH=/usr/bin:/bin /bin/bash --noprofile --norc /workspace/repo/.xgc2/scripts/check_installed_packages.sh
     fi
   '
