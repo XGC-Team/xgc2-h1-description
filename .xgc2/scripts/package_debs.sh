@@ -70,7 +70,7 @@ Priority: optional
 Architecture: ${ARCH}
 Maintainer: XGC2 <apt@example.com>
 Depends: ros-noetic-urdf
-Description: XGC2 Unitree B2 and ARX R5a visual description assets
+Description: XGC2 Unitree H1 visual description assets
 EOF
 
 printf '%s package\n' "${PACKAGE}" >"${PKG_ROOT}/usr/share/doc/${PACKAGE}/README"
