@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 PACKAGE = Path(__file__).resolve().parents[1]
+PACKAGE_NAME = ET.parse(PACKAGE / "package.xml").getroot().findtext("name")
 URDF = PACKAGE / "urdf" / "h1_visual.urdf"
 MESHES = PACKAGE / "meshes"
 HASHES = PACKAGE / "ASSET_SHA256SUMS"
@@ -37,7 +38,7 @@ def _canonical_without_visual_uri(root: ET.Element) -> tuple:
 
 
 def _resolve_mesh(uri: str) -> Path:
-    prefix = "package://" + PACKAGE.name + "/"
+    prefix = "package://" + PACKAGE_NAME + "/"
     if not uri.startswith(prefix):
         raise ValueError("Unexpected package URI: " + uri)
     path = (PACKAGE / uri[len(prefix):]).resolve()
