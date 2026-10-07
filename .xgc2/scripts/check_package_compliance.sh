@@ -2,7 +2,14 @@
 set -euo pipefail
 
 grep -q '^id: xgc2-h1-description$' .xgc2/product.yml
-grep -q '^version: 0.1.0-1$' .xgc2/product.yml
+version="$(awk '/^version:/ {print $2; exit}' .xgc2/product.yml)"
+focal_version="$(awk '/^  apt_versions:/ {inside=1; next} inside && /^    focal:/ {print $2; exit}' .xgc2/product.yml)"
+test -n "${version}"
+dpkg --validate-version "${version}"
+if [[ "${focal_version}" != "${version}" ]]; then
+  echo "focal APT version must match the product version" >&2
+  exit 1
+fi
 grep -q '^kind: ros1-apt$' .xgc2/product.yml
 grep -q '^  distro: noetic$' .xgc2/product.yml
 grep -q '^  distribution: focal$' .xgc2/product.yml
