@@ -1,0 +1,2668 @@
+{
+  "robot": "h1",
+  "tier": "lod1500",
+  "units": "metres",
+  "status": "candidate_pending_viewer_acceptance",
+  "nominal_vehicle_triangle_budget": 1500,
+  "allocated_vehicle_triangle_target": 3000,
+  "hard_vehicle_triangle_cap": null,
+  "budget_policy": "User waived 1500 hard cap for complex humanoids; low tier retains legacy URI but prioritizes limb/finger/neck/foot geometry at approximately 3000 triangles.",
+  "generator": "memory/tools/xgc2-robot-mesh-lod/build_humanoid_ladder.py",
+  "generator_sha256": "e29bbb49e70c88ca745535c9dcb0a8a34ff89b6ab89855b941f89ad8abc3db8d",
+  "generator_dependencies": {
+    "mesh_ops.py": "943ca171f4ec21b7824ccb808f40acfd1e715bbd80882219b772f705d05a2e22"
+  },
+  "blender_version": "5.2.2 LTS",
+  "source_assets": {
+    "urdf/h1_visual.urdf": "795e0e69c5795a2a5773ecb918b01dde5d2b437f0087794a0f130a95ec0bc5d7",
+    "meshes/pelvis.STL": "dc2cbbeb07d3b63bce9fedeb8cf5252609dca1e89380734d22d5b3c8ded2f15c",
+    "meshes/left_hip_yaw_link.STL": "103a854e684b84e1baba7d073822079069c64d0fa7b1592f29d38bd29f545bfb",
+    "meshes/left_hip_roll_link.STL": "8ed880cf1171e048cfe50489fe2546c32790ac0c24a2b3b4c560495401013552",
+    "meshes/left_hip_pitch_link.STL": "aa790c31ffc100cd182f2bf4480e7bfda675edc58ed8f361b6553a4975c9de3b",
+    "meshes/left_knee_link.STL": "efda8a6c54406c788102c0d6e59ea95e24114607bc2da9a2bf7f287ef7e48109",
+    "meshes/left_ankle_link.STL": "2d403f5414764e600af95d96eaee8ab7e49d2c7f75c1ae3dbbde052d4a14ffa1",
+    "meshes/right_hip_yaw_link.STL": "10badbb0ac78e22fc220f421b1c919cfcf59406b412d78313e4b8b06cbc51e47",
+    "meshes/right_hip_roll_link.STL": "3e95b01b0a215e1d134545d4073cf7a72ab38ca33e35c606c03f1706d63588c6",
+    "meshes/right_hip_pitch_link.STL": "3c0300dd96432f218857886007e9d4e8be038cd8b85e04e84a59df4de7f90476",
+    "meshes/right_knee_link.STL": "6183abbaef2afc775c220853e403b8479022a99954dbeef829b39d71916ddeda",
+    "meshes/right_ankle_link.STL": "b39f5b3245926e935b9b37bdf25080d482d3be921aa5d70e01fe5f29ef70910a",
+    "meshes/torso_link.STL": "3ab785cbfbd851b0e9c59a46871aabc4718f3f8e726e21a2d14360d217ec7ba8",
+    "meshes/left_shoulder_pitch_link.STL": "42e1db49464ca0f44f933114ee426e7f6d6310d20cf104bfa38b5ed4794cfab7",
+    "meshes/left_shoulder_roll_link.STL": "8d3bcf767d72a9a5d7dae539eae79dc4132f0159b8803a6f6f2f9ad4b7e94d19",
+    "meshes/left_shoulder_yaw_link.STL": "e22a5b53f8f307e6c5d6c17f9ceae4852c6468547a951cb39dfdec9ee414b515",
+    "meshes/left_elbow_link.STL": "5ccf9bc83a751c1965b692e75534e57ee3c8a0916cbcff2ccccd8fe2b9d818d7",
+    "meshes/right_shoulder_pitch_link.STL": "850ffa7321993bfadcdb8bab1d422239f6a20abe27daa5ef99622f55d4da3217",
+    "meshes/right_shoulder_roll_link.STL": "b9e793e351e09027d27427c06df2c1cb6b37c0205d0f68686b0d73916c6821de",
+    "meshes/right_shoulder_yaw_link.STL": "0c9e4bec895f24c07fb2c4d132fc5e3cc7146155547267e9c270789af6567781",
+    "meshes/right_elbow_link.STL": "bc1b2aa33cffda279b3e6a40b5b932b86de9cce6c41f0c0d860b442e81edcdc2",
+    "meshes/logo_link.STL": "ef9635c847ca7cd61aeaed86ad599935b648fb6f8688867c0448917b1811511b"
+  },
+  "intentionally_empty_visual_meshes": {
+    "meshes/lod1500/logo_link.dae": {
+      "role": "decorative_logo",
+      "reason": "coherent omission of decorative lettering"
+    }
+  },
+  "parts": {
+    "pelvis": {
+      "triangles": 152,
+      "instances": 1,
+      "vehicle_triangles": 152,
+      "links": [
+        "pelvis"
+      ],
+      "source_triangles": 13456,
+      "source_cleaned_triangles": 13456,
+      "source_bounds_m": [
+        [
+          -0.06899966299533844,
+          -0.15340293943881989,
+          -0.08474999666213989
+        ],
+        [
+          0.06898003071546555,
+          0.15340293943881989,
+          0.007700000423938036
+        ]
+      ],
+      "source_surface_area_m2": 0.14008468074085292,
+      "source_bbox_volume_m3": 0.003913683988234677,
+      "source_role_floor": 80,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/pelvis.dae",
+      "bytes": 14169,
+      "sha256": "441e61a1cb2b4d143905dbbc2c04b92ec2a9faa841b63ccd0a5c7acc929533a8",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "pelvis",
+      "allocated_triangle_budget": 153,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 3.830651727434517e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8800344183043084,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.002433011876579742,
+      "closed_component_signed_volumes_m3": [
+        0.0024330118624540363
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.06939075142145157,
+          -0.15213356912136078,
+          -0.08174771070480347
+        ],
+        [
+          0.0666605681180954,
+          0.15268106758594513,
+          0.0054324837401509285
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.0069215563125908375,
+          "p95_m": 0.0051534358877688615,
+          "p99_m": 0.006222170791588723
+        },
+        "candidate_to_source": {
+          "samples": 456,
+          "max_m": 0.0032982388511300087,
+          "p95_m": 0.002750623505562544,
+          "p99_m": 0.0032982388511300087
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "pelvis",
+          "joint": "left_hip_yaw_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0875,
+            -0.1742
+          ],
+          "source_nearest_surface_m": 0.09845000505447388,
+          "candidate_nearest_surface_m": 0.09569518268108368,
+          "absolute_nearest_surface_distance_change_m": 0.0027548223733901978
+        },
+        {
+          "link": "pelvis",
+          "joint": "right_hip_yaw_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            -0.0875,
+            -0.1742
+          ],
+          "source_nearest_surface_m": 0.09845000505447388,
+          "candidate_nearest_surface_m": 0.09561318904161453,
+          "absolute_nearest_surface_distance_change_m": 0.0028368160128593445
+        },
+        {
+          "link": "pelvis",
+          "joint": "torso_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "source_nearest_surface_m": 0.007700000423938036,
+          "candidate_nearest_surface_m": 0.004663423169404268,
+          "absolute_nearest_surface_distance_change_m": 0.0030365772545337677
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 153,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8800344138835665,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 3.830651325375537e-05
+    },
+    "left_hip_yaw_link": {
+      "triangles": 100,
+      "instances": 1,
+      "vehicle_triangles": 100,
+      "links": [
+        "left_hip_yaw_link"
+      ],
+      "source_triangles": 17716,
+      "source_cleaned_triangles": 17716,
+      "source_bounds_m": [
+        [
+          -0.10245000571012497,
+          -0.06384719908237457,
+          -0.060999996960163116
+        ],
+        [
+          0.060999996960163116,
+          0.06384720653295517,
+          0.09670000523328781
+        ]
+      ],
+      "source_surface_area_m2": 0.09709076477073936,
+      "source_bbox_volume_m3": 0.0032914593988307267,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_hip_yaw_link.dae",
+      "bytes": 11947,
+      "sha256": "16f9cc1f4b2d01c7bc9ab40daae4ddae9e79c253b7cc3b3c2981558d0ee4deaf",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 101,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 1.9135179340056463e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8727895557607271,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0006675854341830069,
+      "closed_component_signed_volumes_m3": [
+        0.0006675854498966829
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.0996062159538269,
+          -0.05843641236424446,
+          -0.05530731379985809
+        ],
+        [
+          0.052733879536390305,
+          0.05902160331606865,
+          0.09359002113342285
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.013334650546312332,
+          "p95_m": 0.009096917230635881,
+          "p99_m": 0.011958155194297432
+        },
+        "candidate_to_source": {
+          "samples": 300,
+          "max_m": 0.005539910402148962,
+          "p95_m": 0.004176435060799122,
+          "p99_m": 0.005539910402148962
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_hip_yaw_link",
+          "joint": "left_hip_yaw_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.028549998998641968,
+          "candidate_nearest_surface_m": 0.033959247171878815,
+          "absolute_nearest_surface_distance_change_m": 0.005409248173236847
+        },
+        {
+          "link": "left_hip_yaw_link",
+          "joint": "left_hip_roll_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.039468,
+            0.0,
+            0.0
+          ],
+          "source_nearest_surface_m": 0.06801800429821014,
+          "candidate_nearest_surface_m": 0.07324831932783127,
+          "absolute_nearest_surface_distance_change_m": 0.005230315029621124
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.001362083355585734,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 101,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8727895549189906,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 1.9135179692727182e-05
+    },
+    "left_hip_roll_link": {
+      "triangles": 94,
+      "instances": 1,
+      "vehicle_triangles": 94,
+      "links": [
+        "left_hip_roll_link"
+      ],
+      "source_triangles": 15384,
+      "source_cleaned_triangles": 15384,
+      "source_bounds_m": [
+        [
+          -0.06801772862672806,
+          -0.05950000137090683,
+          -0.0640295222401619
+        ],
+        [
+          0.060982268303632736,
+          0.05950000137090683,
+          0.0640295222401619
+        ]
+      ],
+      "source_surface_area_m2": 0.08072151255056104,
+      "source_bbox_volume_m3": 0.0019658343903328477,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_hip_roll_link.dae",
+      "bytes": 11156,
+      "sha256": "9b8693200b084d7b9f0fb83173a4fe6b8e1abf4d46eaaac1e6e491b50e02889c",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 95,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 7.325636591279371e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.9390198193990689,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0006740882031656162,
+      "closed_component_signed_volumes_m3": [
+        0.0006740881976468793
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.06844337284564972,
+          -0.0540202371776104,
+          -0.06139307841658592
+        ],
+        [
+          0.0637010931968689,
+          0.057280633598566055,
+          0.06201445311307907
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.009256239049136639,
+          "p95_m": 0.007265167613513766,
+          "p99_m": 0.008822039030492305
+        },
+        "candidate_to_source": {
+          "samples": 282,
+          "max_m": 0.0034421097952872515,
+          "p95_m": 0.003190118120983243,
+          "p99_m": 0.0034421097952872515
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_hip_roll_link",
+          "joint": "left_hip_roll_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.020566025748848915,
+          "candidate_nearest_surface_m": 0.019107168540358543,
+          "absolute_nearest_surface_distance_change_m": 0.0014588572084903717
+        },
+        {
+          "link": "left_hip_roll_link",
+          "joint": "left_hip_pitch_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.11536,
+            0.0
+          ],
+          "source_nearest_surface_m": 0.07990995049476624,
+          "candidate_nearest_surface_m": 0.08616673946380615,
+          "absolute_nearest_surface_distance_change_m": 0.006256788969039917
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.0010749999744196733,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 95,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.9390198199954802,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 7.32563655313289e-05
+    },
+    "left_hip_pitch_link": {
+      "triangles": 164,
+      "instances": 1,
+      "vehicle_triangles": 164,
+      "links": [
+        "left_hip_pitch_link"
+      ],
+      "source_triangles": 9046,
+      "source_cleaned_triangles": 9046,
+      "source_bounds_m": [
+        [
+          -0.06094180792570114,
+          -0.09439197927713394,
+          -0.44601085782051086
+        ],
+        [
+          0.06098208948969841,
+          0.030000006780028343,
+          0.06092407926917076
+        ]
+      ],
+      "source_surface_area_m2": 0.1741796865182761,
+      "source_bbox_volume_m3": 0.007688355596653106,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_hip_pitch_link.dae",
+      "bytes": 17012,
+      "sha256": "dc062f0dd92d81a19cff98071fb9ec788c312f799f99d21ecd4af1ece99548a2",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 166,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 2.832277212714197e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8882158961651241,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.002315637201528832,
+      "closed_component_signed_volumes_m3": [
+        0.002315637179332327
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.05895093455910683,
+          -0.09426428377628326,
+          -0.44377803802490234
+        ],
+        [
+          0.06160319969058037,
+          0.03014139086008072,
+          0.05939304456114769
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.02102753147482872,
+          "p95_m": 0.005180974397808313,
+          "p99_m": 0.01351227331906557
+        },
+        "candidate_to_source": {
+          "samples": 492,
+          "max_m": 0.003275639610365033,
+          "p95_m": 0.0028911996632814407,
+          "p99_m": 0.003275639610365033
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_hip_pitch_link",
+          "joint": "left_hip_pitch_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.029973937198519707,
+          "candidate_nearest_surface_m": 0.028384150937199593,
+          "absolute_nearest_surface_distance_change_m": 0.0015897862613201141
+        },
+        {
+          "link": "left_hip_pitch_link",
+          "joint": "left_knee_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            -0.4
+          ],
+          "source_nearest_surface_m": 0.020236654207110405,
+          "candidate_nearest_surface_m": 0.020383212715387344,
+          "absolute_nearest_surface_distance_change_m": 0.0001465585082769394
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 166,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8882158977926751,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 2.83227741023801e-05
+    },
+    "left_knee_link": {
+      "triangles": 148,
+      "instances": 1,
+      "vehicle_triangles": 148,
+      "links": [
+        "left_knee_link"
+      ],
+      "source_triangles": 13206,
+      "source_cleaned_triangles": 13203,
+      "source_bounds_m": [
+        [
+          -0.05624750629067421,
+          -0.048050008714199066,
+          -0.4150000214576721
+        ],
+        [
+          0.05099786818027496,
+          0.035450007766485214,
+          0.04710688814520836
+        ]
+      ],
+      "source_surface_area_m2": 0.12210391805857271,
+      "source_bbox_volume_m3": 0.004138163002022234,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_knee_link.dae",
+      "bytes": 15274,
+      "sha256": "0547a3f6eb97e1a1966dc6ebfddc45c7f070b30d7dbb68e6d6281233b326dd17",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 149,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 3.729914158178106e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8520042128986866,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0012952623185532707,
+      "closed_component_signed_volumes_m3": [
+        0.0012952623033513824
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.05459475517272949,
+          -0.044904474169015884,
+          -0.4203762114048004
+        ],
+        [
+          0.050272468477487564,
+          0.03516620397567749,
+          0.04953397437930107
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.008266949094831944,
+          "p95_m": 0.006019437662325798,
+          "p99_m": 0.007106502768583596
+        },
+        "candidate_to_source": {
+          "samples": 444,
+          "max_m": 0.005498647224158049,
+          "p95_m": 0.0038441044744104147,
+          "p99_m": 0.005498647224158049
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_knee_link",
+          "joint": "left_knee_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.005499967839568853,
+          "candidate_nearest_surface_m": 0.0005798152997158468,
+          "absolute_nearest_surface_distance_change_m": 0.004920152539853007
+        },
+        {
+          "link": "left_knee_link",
+          "joint": "left_ankle_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            -0.4
+          ],
+          "source_nearest_surface_m": 0.012323776260018349,
+          "candidate_nearest_surface_m": 0.011776147410273552,
+          "absolute_nearest_surface_distance_change_m": 0.0005476288497447968
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 6,
+        "nonmanifold_edges": 3,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 149,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8520042122141602,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 3.7299126876714054e-05
+    },
+    "left_ankle_link": {
+      "triangles": 174,
+      "instances": 1,
+      "vehicle_triangles": 174,
+      "links": [
+        "left_ankle_link"
+      ],
+      "source_triangles": 2592,
+      "source_cleaned_triangles": 2592,
+      "source_bounds_m": [
+        [
+          -0.10000000149011612,
+          -0.03999999910593033,
+          -0.07000000774860382
+        ],
+        [
+          0.20031698048114777,
+          0.03999999910593033,
+          0.010999131016433239
+        ]
+      ],
+      "source_surface_area_m2": 0.049806841799303184,
+      "source_bbox_volume_m3": 0.0019460333081977679,
+      "source_role_floor": 120,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_ankle_link.dae",
+      "bytes": 17953,
+      "sha256": "346050be15589c07596ca1574b7fd83bc6ce0d4fa34a1e0b2a8f213ce0fa4326",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "foot",
+      "allocated_triangle_budget": 176,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 1.5900478996036554e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8739005259576836,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.00023055476514295193,
+      "closed_component_signed_volumes_m3": [
+        0.0002305547571052428
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.10100667923688889,
+          -0.04085551202297211,
+          -0.06899973750114441
+        ],
+        [
+          0.19948019087314606,
+          0.04091013967990875,
+          0.010152511298656464
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.00436445651575923,
+          "p95_m": 0.0021630060160532593,
+          "p99_m": 0.0033868303406052284
+        },
+        "candidate_to_source": {
+          "samples": 522,
+          "max_m": 0.001958301058039069,
+          "p95_m": 0.0011137844994664192,
+          "p99_m": 0.0016548484563827515
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_ankle_link",
+          "joint": "left_ankle_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.0057955351658165455,
+          "candidate_nearest_surface_m": 0.005051036830991507,
+          "absolute_nearest_surface_distance_change_m": 0.0007444983348250389
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 176,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8739005262853954,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 1.590047890695146e-05
+    },
+    "right_hip_yaw_link": {
+      "triangles": 98,
+      "instances": 1,
+      "vehicle_triangles": 98,
+      "links": [
+        "right_hip_yaw_link"
+      ],
+      "source_triangles": 17688,
+      "source_cleaned_triangles": 17687,
+      "source_bounds_m": [
+        [
+          -0.10245000571012497,
+          -0.06384720653295517,
+          -0.060999996960163116
+        ],
+        [
+          0.060999996960163116,
+          0.06384719908237457,
+          0.09670000523328781
+        ]
+      ],
+      "source_surface_area_m2": 0.09708035153295695,
+      "source_bbox_volume_m3": 0.0032914593988307267,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_hip_yaw_link.dae",
+      "bytes": 11465,
+      "sha256": "c112fa139f7add2125eefc1c6a34d23aa506980b117a362223d84e2d99ab3bc3",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 100,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 7.996706372621207e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8355719828318398,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0007080311411846647,
+      "closed_component_signed_volumes_m3": [
+        0.000708031137572775
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.1011495590209961,
+          -0.05857931077480316,
+          -0.06236866116523743
+        ],
+        [
+          0.05700492486357689,
+          0.06342244893312454,
+          0.09628384560346603
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.012909432873129845,
+          "p95_m": 0.008164742356166241,
+          "p99_m": 0.01031591422855854
+        },
+        "candidate_to_source": {
+          "samples": 294,
+          "max_m": 0.005389167461544275,
+          "p95_m": 0.0039001258555799723,
+          "p99_m": 0.005389167461544275
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_hip_yaw_link",
+          "joint": "right_hip_yaw_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.028549998998641968,
+          "candidate_nearest_surface_m": 0.03249415010213852,
+          "absolute_nearest_surface_distance_change_m": 0.0039441511034965515
+        },
+        {
+          "link": "right_hip_yaw_link",
+          "joint": "right_hip_roll_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.039468,
+            0.0,
+            0.0
+          ],
+          "source_nearest_surface_m": 0.06801800429821014,
+          "candidate_nearest_surface_m": 0.07187098264694214,
+          "absolute_nearest_surface_distance_change_m": 0.0038529783487319946
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 2,
+        "nonmanifold_edges": 1,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.001362083355585734,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 100,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.835571980757192,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 7.996706305703885e-05
+    },
+    "right_hip_roll_link": {
+      "triangles": 94,
+      "instances": 1,
+      "vehicle_triangles": 94,
+      "links": [
+        "right_hip_roll_link"
+      ],
+      "source_triangles": 15368,
+      "source_cleaned_triangles": 15368,
+      "source_bounds_m": [
+        [
+          -0.06801772862672806,
+          -0.05950000137090683,
+          -0.0640295222401619
+        ],
+        [
+          0.06085285544395447,
+          0.05950000137090683,
+          0.0640295222401619
+        ]
+      ],
+      "source_surface_area_m2": 0.08071511961998905,
+      "source_bbox_volume_m3": 0.001963862264316099,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_hip_roll_link.dae",
+      "bytes": 11055,
+      "sha256": "1452c667f0ecc15b7288bce4d71543ec48524c8854db7efe551850a4c1a66339",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 95,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 6.320224973750286e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8986021503682222,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0006379087490022711,
+      "closed_component_signed_volumes_m3": [
+        0.000637908748392609
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.0662773922085762,
+          -0.055622249841690063,
+          -0.06120115518569946
+        ],
+        [
+          0.057560764253139496,
+          0.05762963369488716,
+          0.06185955926775932
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.011201659217476845,
+          "p95_m": 0.007284252531826495,
+          "p99_m": 0.008419207707047462
+        },
+        "candidate_to_source": {
+          "samples": 282,
+          "max_m": 0.005004622042179108,
+          "p95_m": 0.0038975474890321493,
+          "p99_m": 0.005004622042179108
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_hip_roll_link",
+          "joint": "right_hip_roll_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.020566025748848915,
+          "candidate_nearest_surface_m": 0.017138618975877762,
+          "absolute_nearest_surface_distance_change_m": 0.0034274067729711533
+        },
+        {
+          "link": "right_hip_roll_link",
+          "joint": "right_hip_pitch_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            -0.11536,
+            0.0
+          ],
+          "source_nearest_surface_m": 0.07990995049476624,
+          "candidate_nearest_surface_m": 0.08789410442113876,
+          "absolute_nearest_surface_distance_change_m": 0.007984153926372528
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.0010739215339223543,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 95,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8986021499370569,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 6.320225069597893e-05
+    },
+    "right_hip_pitch_link": {
+      "triangles": 164,
+      "instances": 1,
+      "vehicle_triangles": 164,
+      "links": [
+        "right_hip_pitch_link"
+      ],
+      "source_triangles": 9046,
+      "source_cleaned_triangles": 9046,
+      "source_bounds_m": [
+        [
+          -0.06094180792570114,
+          -0.030000006780028343,
+          -0.44601085782051086
+        ],
+        [
+          0.06098208948969841,
+          0.09439197927713394,
+          0.06092407926917076
+        ]
+      ],
+      "source_surface_area_m2": 0.17419638793620917,
+      "source_bbox_volume_m3": 0.007688355596653106,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_hip_pitch_link.dae",
+      "bytes": 16748,
+      "sha256": "e4e20e01b144fc7da86fd124335631b28ab0e554ad5e5c2381c40e71366f7a54",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 166,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 1.2821776548201344e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.910380927183041,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0022948834898260887,
+      "closed_component_signed_volumes_m3": [
+        0.002294883516742008
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.054301537573337555,
+          -0.0302656851708889,
+          -0.4487132430076599
+        ],
+        [
+          0.05870481953024864,
+          0.09422637522220612,
+          0.06126142293214798
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.02130654640495777,
+          "p95_m": 0.005948163731954991,
+          "p99_m": 0.009076071083545658
+        },
+        "candidate_to_source": {
+          "samples": 492,
+          "max_m": 0.0036697890609502792,
+          "p95_m": 0.0028734165243804455,
+          "p99_m": 0.0036697890609502792
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_hip_pitch_link",
+          "joint": "right_hip_pitch_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.029973935335874557,
+          "candidate_nearest_surface_m": 0.028614947572350502,
+          "absolute_nearest_surface_distance_change_m": 0.0013589877635240555
+        },
+        {
+          "link": "right_hip_pitch_link",
+          "joint": "right_knee_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            -0.4
+          ],
+          "source_nearest_surface_m": 0.020236654207110405,
+          "candidate_nearest_surface_m": 0.02087296172976494,
+          "absolute_nearest_surface_distance_change_m": 0.0006363075226545334
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 166,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.910380927310022,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 1.2821765427273804e-05
+    },
+    "right_knee_link": {
+      "triangles": 148,
+      "instances": 1,
+      "vehicle_triangles": 148,
+      "links": [
+        "right_knee_link"
+      ],
+      "source_triangles": 13242,
+      "source_cleaned_triangles": 13241,
+      "source_bounds_m": [
+        [
+          -0.05624750629067421,
+          -0.035450007766485214,
+          -0.4150000214576721
+        ],
+        [
+          0.05099786818027496,
+          0.048050008714199066,
+          0.04710688814520836
+        ]
+      ],
+      "source_surface_area_m2": 0.12211163709030512,
+      "source_bbox_volume_m3": 0.004138163002022234,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_knee_link.dae",
+      "bytes": 15457,
+      "sha256": "58fa51189c7ca0d3cc2dae580d6b5e0797dced147303d36bb6de953a702b2ce1",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 149,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 6.224963273216586e-06,
+      "minimum_avg_corner_normal_dot_face_normal": 0.9046994765342026,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0013124301699995572,
+      "closed_component_signed_volumes_m3": [
+        0.0013124301814689823
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.05466614291071892,
+          -0.03508004546165466,
+          -0.41067585349082947
+        ],
+        [
+          0.050401244312524796,
+          0.048481620848178864,
+          0.049779437482357025
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.008864550851285458,
+          "p95_m": 0.006155457464046774,
+          "p99_m": 0.0077741305995732545
+        },
+        "candidate_to_source": {
+          "samples": 444,
+          "max_m": 0.0043589649721980095,
+          "p95_m": 0.0028173045720905066,
+          "p99_m": 0.003984518421348178
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_knee_link",
+          "joint": "right_knee_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.005499967839568853,
+          "candidate_nearest_surface_m": 0.0038860614877194166,
+          "absolute_nearest_surface_distance_change_m": 0.0016139063518494368
+        },
+        {
+          "link": "right_knee_link",
+          "joint": "right_ankle_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            -0.4
+          ],
+          "source_nearest_surface_m": 0.012323797680437565,
+          "candidate_nearest_surface_m": 0.00917324423789978,
+          "absolute_nearest_surface_distance_change_m": 0.0031505534425377846
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 2,
+        "nonmanifold_edges": 1,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 149,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.9046994768093598,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 6.224964008341534e-06
+    },
+    "right_ankle_link": {
+      "triangles": 174,
+      "instances": 1,
+      "vehicle_triangles": 174,
+      "links": [
+        "right_ankle_link"
+      ],
+      "source_triangles": 2580,
+      "source_cleaned_triangles": 2580,
+      "source_bounds_m": [
+        [
+          -0.10000000149011612,
+          -0.03999999910593033,
+          -0.07000000774860382
+        ],
+        [
+          0.20031698048114777,
+          0.03999999910593033,
+          0.010999131016433239
+        ]
+      ],
+      "source_surface_area_m2": 0.0498041447766734,
+      "source_bbox_volume_m3": 0.0019460333081977679,
+      "source_role_floor": 120,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_ankle_link.dae",
+      "bytes": 18748,
+      "sha256": "94542fd5338488454946761beae2bfb3d06394174f31f3071706f9bcce377647",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "foot",
+      "allocated_triangle_budget": 176,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 3.9079972739669875e-06,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8681668923257682,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.00023220900010822174,
+      "closed_component_signed_volumes_m3": [
+        0.0002322090065148597
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.09886904805898666,
+          -0.040856413543224335,
+          -0.06895963847637177
+        ],
+        [
+          0.19947710633277893,
+          0.04091041162610054,
+          0.011316518299281597
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.0031052143312990665,
+          "p95_m": 0.0021631993586197495,
+          "p99_m": 0.002799593610689044
+        },
+        "candidate_to_source": {
+          "samples": 522,
+          "max_m": 0.0013060104101896286,
+          "p95_m": 0.0010070217307656991,
+          "p99_m": 0.0013060104101896286
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_ankle_link",
+          "joint": "right_ankle_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.0057955351658165455,
+          "candidate_nearest_surface_m": 0.004157817456871271,
+          "absolute_nearest_surface_distance_change_m": 0.0016377177089452744
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 176,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.868166894697497,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 3.907997618259011e-06
+    },
+    "torso_link": {
+      "triangles": 564,
+      "instances": 1,
+      "vehicle_triangles": 564,
+      "links": [
+        "torso_link"
+      ],
+      "source_triangles": 46786,
+      "source_cleaned_triangles": 46786,
+      "source_bounds_m": [
+        [
+          -0.0729999989271164,
+          -0.1720477193593979,
+          4.1722897359264266e-10
+        ],
+        [
+          0.1248040720820427,
+          0.1720477193593979,
+          0.753950297832489
+        ]
+      ],
+      "source_surface_area_m2": 0.7106457363284633,
+      "source_bbox_volume_m3": 0.05131647992925984,
+      "source_role_floor": 350,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/torso_link.dae",
+      "bytes": 53604,
+      "sha256": "067cc09048907e8d29affd18fd0b63f07cb0e463bbe5b36e05879e18a2503619",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "torso",
+      "allocated_triangle_budget": 564,
+      "small_numeric_boundary_loop_repairs": [
+        {
+          "boundary_edges": 3,
+          "bounds_m": [
+            [
+              -1.81292762135854e-05,
+              -0.05400003492832184,
+              0.0099972914904356
+            ],
+            [
+              1.9100194492693845e-07,
+              -0.05393552407622337,
+              0.009999953210353851
+            ]
+          ]
+        }
+      ],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 1.713041818844222e-11,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8362125773961435,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.015392389492575266,
+      "closed_component_signed_volumes_m3": [
+        0.015392389524036118
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.07257577031850815,
+          -0.17046885192394257,
+          -0.0030833184719085693
+        ],
+        [
+          0.12567023932933807,
+          0.17040719091892242,
+          0.7527409195899963
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.02848462574183941,
+          "p95_m": 0.01087659867480396,
+          "p99_m": 0.021149241700768467
+        },
+        "candidate_to_source": {
+          "samples": 800,
+          "max_m": 0.00402326975017786,
+          "p95_m": 0.0033644360955804586,
+          "p99_m": 0.003993278369307518
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "torso_link",
+          "joint": "torso_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.00699999975040555,
+          "candidate_nearest_surface_m": 0.007678225636482239,
+          "absolute_nearest_surface_distance_change_m": 0.0006782258860766888
+        },
+        {
+          "link": "torso_link",
+          "joint": "left_shoulder_pitch_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0055,
+            0.15535,
+            0.42999
+          ],
+          "source_nearest_surface_m": 4.693863957072608e-06,
+          "candidate_nearest_surface_m": 0.0028977226465940475,
+          "absolute_nearest_surface_distance_change_m": 0.002893028782636975
+        },
+        {
+          "link": "torso_link",
+          "joint": "right_shoulder_pitch_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0055,
+            -0.15535,
+            0.42999
+          ],
+          "source_nearest_surface_m": 4.693863957072608e-06,
+          "candidate_nearest_surface_m": 0.0020582315046340227,
+          "absolute_nearest_surface_distance_change_m": 0.00205353764067695
+        },
+        {
+          "link": "torso_link",
+          "joint": "imu_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            -0.04452,
+            -0.01891,
+            0.27756
+          ],
+          "source_nearest_surface_m": 0.02847999706864357,
+          "candidate_nearest_surface_m": 0.02657957747578621,
+          "absolute_nearest_surface_distance_change_m": 0.0019004195928573608
+        },
+        {
+          "link": "torso_link",
+          "joint": "logo_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "source_nearest_surface_m": 0.00699999975040555,
+          "candidate_nearest_surface_m": 0.007678225636482239,
+          "absolute_nearest_surface_distance_change_m": 0.0006782258860766888
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 564,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.836212578494356,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 1.713040438193412e-11
+    },
+    "left_shoulder_pitch_link": {
+      "triangles": 86,
+      "instances": 1,
+      "vehicle_triangles": 86,
+      "links": [
+        "left_shoulder_pitch_link"
+      ],
+      "source_triangles": 15748,
+      "source_cleaned_triangles": 15748,
+      "source_bounds_m": [
+        [
+          -0.037700001150369644,
+          -1.2399838489329795e-08,
+          -0.0650000050663948
+        ],
+        [
+          0.03200000151991844,
+          0.10490429401397705,
+          0.03850000724196434
+        ]
+      ],
+      "source_surface_area_m2": 0.060536079028558495,
+      "source_bbox_volume_m3": 0.0007567745402434881,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_shoulder_pitch_link.dae",
+      "bytes": 10180,
+      "sha256": "935e8478de29c92f294655f5e79b9a57843296161307635f0cc6549d6fe3cd58",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 87,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 3.6433430302109464e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.9440204885726147,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.00037219316726368125,
+      "closed_component_signed_volumes_m3": [
+        0.0003721931712538096
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.03465714678168297,
+          0.001376412925310433,
+          -0.06216541305184364
+        ],
+        [
+          0.03253501281142235,
+          0.10291796177625656,
+          0.03392878174781799
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.00927781406790018,
+          "p95_m": 0.00658450627233833,
+          "p99_m": 0.00871654092334211
+        },
+        "candidate_to_source": {
+          "samples": 258,
+          "max_m": 0.003136065788567066,
+          "p95_m": 0.002840498101431874,
+          "p99_m": 0.003136065788567066
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_shoulder_pitch_link",
+          "joint": "left_shoulder_pitch_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.004999999888241291,
+          "candidate_nearest_surface_m": 0.006501801311969757,
+          "absolute_nearest_surface_distance_change_m": 0.001501801423728466
+        },
+        {
+          "link": "left_shoulder_pitch_link",
+          "joint": "left_shoulder_roll_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            -0.0055,
+            0.0565,
+            -0.0165
+          ],
+          "source_nearest_surface_m": 0.03220000118017197,
+          "candidate_nearest_surface_m": 0.028772659599781036,
+          "absolute_nearest_surface_distance_change_m": 0.00342734158039093
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.0008742025534484629,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 87,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.9440204886793562,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 3.643343022455528e-05
+    },
+    "left_shoulder_roll_link": {
+      "triangles": 86,
+      "instances": 1,
+      "vehicle_triangles": 86,
+      "links": [
+        "left_shoulder_roll_link"
+      ],
+      "source_triangles": 18066,
+      "source_cleaned_triangles": 18065,
+      "source_bounds_m": [
+        [
+          -0.04825027287006378,
+          -0.0480000302195549,
+          -0.13950000703334808
+        ],
+        [
+          0.048500001430511475,
+          0.04840248078107834,
+          0.03398572653532028
+        ]
+      ],
+      "source_surface_area_m2": 0.06292350804795797,
+      "source_bbox_volume_m3": 0.0016180961253086186,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_shoulder_roll_link.dae",
+      "bytes": 10227,
+      "sha256": "ca1ab30cded9131dee70568f1b7381ec43c5973a6ea535b8c908953197baf663",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 88,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 3.7021809296556125e-06,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8897293621826858,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.00020052847133774537,
+      "closed_component_signed_volumes_m3": [
+        0.00020052847055633077
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.04369395598769188,
+          -0.04461461305618286,
+          -0.13339146971702576
+        ],
+        [
+          0.04817669838666916,
+          0.042835891246795654,
+          0.028834810480475426
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.01648351550102234,
+          "p95_m": 0.009640722721815109,
+          "p99_m": 0.01392769164405763
+        },
+        "candidate_to_source": {
+          "samples": 258,
+          "max_m": 0.005713228136301041,
+          "p95_m": 0.004314872436225414,
+          "p99_m": 0.005713228136301041
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_shoulder_roll_link",
+          "joint": "left_shoulder_roll_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.033900000154972076,
+          "candidate_nearest_surface_m": 0.03695114701986313,
+          "absolute_nearest_surface_distance_change_m": 0.0030511468648910522
+        },
+        {
+          "link": "left_shoulder_roll_link",
+          "joint": "left_shoulder_yaw_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            -0.1343
+          ],
+          "source_nearest_surface_m": 1.5017125321037383e-08,
+          "candidate_nearest_surface_m": 0.006914180237799883,
+          "absolute_nearest_surface_distance_change_m": 0.006914165220674562
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 3,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.0014457144464055697,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 88,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8897293559543256,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 3.702180953708256e-06
+    },
+    "left_shoulder_yaw_link": {
+      "triangles": 134,
+      "instances": 1,
+      "vehicle_triangles": 134,
+      "links": [
+        "left_shoulder_yaw_link"
+      ],
+      "source_triangles": 12882,
+      "source_cleaned_triangles": 12882,
+      "source_bounds_m": [
+        [
+          -0.030017046257853508,
+          -0.030000118538737297,
+          -0.246249720454216
+        ],
+        [
+          0.06701164692640305,
+          0.029999377205967903,
+          -2.2566921664690653e-09
+        ]
+      ],
+      "source_surface_area_m2": 0.08330674210367695,
+      "source_bbox_volume_m3": 0.0014335852529046682,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_shoulder_yaw_link.dae",
+      "bytes": 13801,
+      "sha256": "a065760855b1b91e47d20cddc49ca954d6cca48b4c07b8ca33ba3058dca865ef",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 134,
+      "small_numeric_boundary_loop_repairs": [
+        {
+          "boundary_edges": 3,
+          "bounds_m": [
+            [
+              0.021449759602546692,
+              -0.02876553125679493,
+              -0.1990855187177658
+            ],
+            [
+              0.023405756801366806,
+              -0.02420380525290966,
+              -0.19354236125946045
+            ]
+          ]
+        }
+      ],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 5.979199019910721e-06,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8768204702002222,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0006683072483913159,
+      "closed_component_signed_volumes_m3": [
+        0.000668307247948474
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.02949364297091961,
+          -0.030990997329354286,
+          -0.24729827046394348
+        ],
+        [
+          0.06635884940624237,
+          0.02958931028842926,
+          0.0004891948192380369
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.015337836928665638,
+          "p95_m": 0.011209545563906432,
+          "p99_m": 0.013697814950719476
+        },
+        "candidate_to_source": {
+          "samples": 402,
+          "max_m": 0.0020466705318540335,
+          "p95_m": 0.0016523817321285605,
+          "p99_m": 0.0020441003981977726
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_shoulder_yaw_link",
+          "joint": "left_shoulder_yaw_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.004829521756619215,
+          "candidate_nearest_surface_m": 0.004979100078344345,
+          "absolute_nearest_surface_distance_change_m": 0.00014957832172513008
+        },
+        {
+          "link": "left_shoulder_yaw_link",
+          "joint": "left_elbow_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0185,
+            0.0,
+            -0.198
+          ],
+          "source_nearest_surface_m": 0.021766478195786476,
+          "candidate_nearest_surface_m": 0.022041654214262962,
+          "absolute_nearest_surface_distance_change_m": 0.0002751760184764862
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 134,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8768204967451436,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 5.979199114089769e-06
+    },
+    "left_elbow_link": {
+      "triangles": 144,
+      "instances": 1,
+      "vehicle_triangles": 144,
+      "links": [
+        "left_elbow_link"
+      ],
+      "source_triangles": 5172,
+      "source_cleaned_triangles": 5172,
+      "source_bounds_m": [
+        [
+          -0.03968257084488869,
+          -0.035414956510066986,
+          -0.05441512167453766
+        ],
+        [
+          0.3159998953342438,
+          0.036414735019207,
+          0.03968218341469765
+        ]
+      ],
+      "source_surface_area_m2": 0.11296919990287482,
+      "source_bbox_volume_m3": 0.002404050816922249,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/left_elbow_link.dae",
+      "bytes": 14548,
+      "sha256": "78a3933ae2fae91f22f8c4eccd8e43953487e91f4fe90ff524d5a6aa0b03c5a3",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 146,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 3.337052950589725e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.850267237631779,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0006933372782657847,
+      "closed_component_signed_volumes_m3": [
+        0.0006933372810955518
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.03728746995329857,
+          -0.03482022136449814,
+          -0.05471755191683769
+        ],
+        [
+          0.316108375787735,
+          0.038224104791879654,
+          0.036965034902095795
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.016463294625282288,
+          "p95_m": 0.01376760508865118,
+          "p99_m": 0.015569638293236494
+        },
+        "candidate_to_source": {
+          "samples": 432,
+          "max_m": 0.0026169298216700554,
+          "p95_m": 0.0021887049078941345,
+          "p99_m": 0.0026169298216700554
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "left_elbow_link",
+          "joint": "left_elbow_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.023000111803412437,
+          "candidate_nearest_surface_m": 0.022034812718629837,
+          "absolute_nearest_surface_distance_change_m": 0.0009652990847826004
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 6,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 146,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8502672367744902,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 3.337052466516245e-05
+    },
+    "right_shoulder_pitch_link": {
+      "triangles": 86,
+      "instances": 1,
+      "vehicle_triangles": 86,
+      "links": [
+        "right_shoulder_pitch_link"
+      ],
+      "source_triangles": 15768,
+      "source_cleaned_triangles": 15768,
+      "source_bounds_m": [
+        [
+          -0.037700001150369644,
+          -0.10490429401397705,
+          -0.0650000050663948
+        ],
+        [
+          0.03200000151991844,
+          1.2399838489329795e-08,
+          0.03850000724196434
+        ]
+      ],
+      "source_surface_area_m2": 0.06053532838978534,
+      "source_bbox_volume_m3": 0.0007567745402434881,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_shoulder_pitch_link.dae",
+      "bytes": 10327,
+      "sha256": "c647b62efa466ea782eb7c555ac25b6ab70b42b878baac9ed671a380ffed49b2",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 87,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 3.38253630140555e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.9242176052546445,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.00037422583790006124,
+      "closed_component_signed_volumes_m3": [
+        0.00037422584070545556
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.03504737466573715,
+          -0.1024685874581337,
+          -0.06333673745393753
+        ],
+        [
+          0.03560156002640724,
+          -0.0006623103399761021,
+          0.03146376833319664
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.008336897008121014,
+          "p95_m": 0.005618593073450027,
+          "p99_m": 0.0071986540267243975
+        },
+        "candidate_to_source": {
+          "samples": 258,
+          "max_m": 0.006176975555717945,
+          "p95_m": 0.0027958438731729984,
+          "p99_m": 0.006176975555717945
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_shoulder_pitch_link",
+          "joint": "right_shoulder_pitch_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.00500000175088644,
+          "candidate_nearest_surface_m": 0.004833083599805832,
+          "absolute_nearest_surface_distance_change_m": 0.00016691815108060837
+        },
+        {
+          "link": "right_shoulder_pitch_link",
+          "joint": "right_shoulder_roll_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            -0.0055,
+            -0.0565,
+            -0.0165
+          ],
+          "source_nearest_surface_m": 0.03220000118017197,
+          "candidate_nearest_surface_m": 0.02878228761255741,
+          "absolute_nearest_surface_distance_change_m": 0.0034177135676145554
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.0008742025534484629,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 87,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.9242176055707567,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 3.3825363083330405e-05
+    },
+    "right_shoulder_roll_link": {
+      "triangles": 86,
+      "instances": 1,
+      "vehicle_triangles": 86,
+      "links": [
+        "right_shoulder_roll_link"
+      ],
+      "source_triangles": 18164,
+      "source_cleaned_triangles": 18163,
+      "source_bounds_m": [
+        [
+          -0.04825027287006378,
+          -0.04840248078107834,
+          -0.13950000703334808
+        ],
+        [
+          0.048500001430511475,
+          0.0480000302195549,
+          0.03398572653532028
+        ]
+      ],
+      "source_surface_area_m2": 0.06292400262666287,
+      "source_bbox_volume_m3": 0.0016180961253086186,
+      "source_role_floor": 40,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_shoulder_roll_link.dae",
+      "bytes": 10272,
+      "sha256": "2c57ffe670727829577353c167d1be834ff0e942c3aca3424d0207b51ce7df9d",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "joint_connector",
+      "allocated_triangle_budget": 88,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 4.1319066201329e-09,
+      "minimum_avg_corner_normal_dot_face_normal": 0.9158313837194465,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.00011453159435951234,
+      "closed_component_signed_volumes_m3": [
+        0.0001145316006078701
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.04302768409252167,
+          -0.04884906858205795,
+          -0.12871743738651276
+        ],
+        [
+          0.04815158247947693,
+          0.036886416375637054,
+          0.020885393023490906
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.026028139516711235,
+          "p95_m": 0.016154788993299005,
+          "p99_m": 0.02394595209509134
+        },
+        "candidate_to_source": {
+          "samples": 258,
+          "max_m": 0.00538300909101963,
+          "p95_m": 0.0026480292668566033,
+          "p99_m": 0.00538300909101963
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_shoulder_roll_link",
+          "joint": "right_shoulder_roll_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.033900000154972076,
+          "candidate_nearest_surface_m": 0.03613150119781494,
+          "absolute_nearest_surface_distance_change_m": 0.002231501042842865
+        },
+        {
+          "link": "right_shoulder_roll_link",
+          "joint": "right_shoulder_yaw_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0,
+            0.0,
+            -0.1343
+          ],
+          "source_nearest_surface_m": 9.623315833096058e-08,
+          "candidate_nearest_surface_m": 0.010875832289457321,
+          "absolute_nearest_surface_distance_change_m": 0.01087573605629899
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 3,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.0014457144464055697,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 88,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.9158313834021101,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 4.131924617059471e-09
+    },
+    "right_shoulder_yaw_link": {
+      "triangles": 134,
+      "instances": 1,
+      "vehicle_triangles": 134,
+      "links": [
+        "right_shoulder_yaw_link"
+      ],
+      "source_triangles": 12936,
+      "source_cleaned_triangles": 12936,
+      "source_bounds_m": [
+        [
+          -0.030017046257853508,
+          -0.029999377205967903,
+          -0.2462500035762787
+        ],
+        [
+          0.06701164692640305,
+          0.030000118538737297,
+          -2.2566921664690653e-09
+        ]
+      ],
+      "source_surface_area_m2": 0.08330980750227358,
+      "source_bbox_volume_m3": 0.001433586901148641,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_shoulder_yaw_link.dae",
+      "bytes": 14075,
+      "sha256": "b45736f97e522254cb6fa8882b651d01af3fbd47adea3587db244d2b62c58745",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 134,
+      "small_numeric_boundary_loop_repairs": [
+        {
+          "boundary_edges": 3,
+          "bounds_m": [
+            [
+              0.019114216789603233,
+              0.024585263803601265,
+              -0.2008979469537735
+            ],
+            [
+              0.023292509838938713,
+              0.02829899825155735,
+              -0.19625438749790192
+            ]
+          ]
+        }
+      ],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 1.190878913485411e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.9146546958136652,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0006720004096619,
+      "closed_component_signed_volumes_m3": [
+        0.0006720004097062747
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.030429143458604813,
+          -0.029414484277367592,
+          -0.24683751165866852
+        ],
+        [
+          0.06775493919849396,
+          0.030106056481599808,
+          -0.0003784357395488769
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.016064122319221497,
+          "p95_m": 0.011602185852825641,
+          "p99_m": 0.01457416063174605
+        },
+        "candidate_to_source": {
+          "samples": 402,
+          "max_m": 0.002360653132200241,
+          "p95_m": 0.0018682335678022355,
+          "p99_m": 0.002098246943205595
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_shoulder_yaw_link",
+          "joint": "right_shoulder_yaw_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.004829521756619215,
+          "candidate_nearest_surface_m": 0.004605675116181374,
+          "absolute_nearest_surface_distance_change_m": 0.00022384664043784142
+        },
+        {
+          "link": "right_shoulder_yaw_link",
+          "joint": "right_elbow_joint",
+          "role": "outgoing_joint_frame_origin",
+          "coordinate_m": [
+            0.0185,
+            0.0,
+            -0.198
+          ],
+          "source_nearest_surface_m": 0.021766478195786476,
+          "candidate_nearest_surface_m": 0.021052071824669838,
+          "absolute_nearest_surface_distance_change_m": 0.0007144063711166382
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 134,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.9146546994951745,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 1.1908790605211444e-05
+    },
+    "right_elbow_link": {
+      "triangles": 144,
+      "instances": 1,
+      "vehicle_triangles": 144,
+      "links": [
+        "right_elbow_link"
+      ],
+      "source_triangles": 5170,
+      "source_cleaned_triangles": 5170,
+      "source_bounds_m": [
+        [
+          -0.03968257084488869,
+          -0.036414735019207,
+          -0.05441512167453766
+        ],
+        [
+          0.3159998953342438,
+          0.035414956510066986,
+          0.03968218341469765
+        ]
+      ],
+      "source_surface_area_m2": 0.11296908978184501,
+      "source_bbox_volume_m3": 0.002404050816922249,
+      "source_role_floor": 60,
+      "material_groups": 1,
+      "rgba_srgb": [
+        0.1,
+        0.1,
+        0.1,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/right_elbow_link.dae",
+      "bytes": 14100,
+      "sha256": "5f97ebe50c1167365e52dba5cd2593346261c1b7af137835dbcb1e7b30da4f2d",
+      "method": "per_link_voxel_union_of_source_CAD_shells_then_allocated_local_collapse",
+      "axis_span_regularization_to_source_bounds": false,
+      "semantic_role": "long_limb",
+      "allocated_triangle_budget": 146,
+      "small_numeric_boundary_loop_repairs": [],
+      "post_collapse_duplicate_or_degenerate_triangles_removed": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "degenerate_smoothing_corner_normal_repairs": 0,
+      "minimum_triangle_area_m2": 4.647991866559542e-05,
+      "minimum_avg_corner_normal_dot_face_normal": 0.8899840667640657,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "signed_volume_m3_if_closed": 0.0006868901052947121,
+      "closed_component_signed_volumes_m3": [
+        0.00068689008834788
+      ],
+      "coordinate_bounds_m": [
+        [
+          -0.03919312730431557,
+          -0.037442270666360855,
+          -0.05345619469881058
+        ],
+        [
+          0.314419686794281,
+          0.03707205504179001,
+          0.040759261697530746
+        ]
+      ],
+      "sampled_surface_deviation": {
+        "method": "Deterministic evenly indexed triangle-vertex samples in both directions; not a Hausdorff bound.",
+        "source_to_candidate": {
+          "samples": 800,
+          "max_m": 0.016285918653011322,
+          "p95_m": 0.013829788938164708,
+          "p99_m": 0.015420592492446303
+        },
+        "candidate_to_source": {
+          "samples": 432,
+          "max_m": 0.002199955517426133,
+          "p95_m": 0.002107525710016489,
+          "p99_m": 0.002199955517426133
+        }
+      },
+      "joint_frame_anchor_checks": [
+        {
+          "link": "right_elbow_link",
+          "joint": "right_elbow_joint",
+          "role": "incoming_joint_frame_origin",
+          "coordinate_m": [
+            0,
+            0,
+            0
+          ],
+          "source_nearest_surface_m": 0.023000111803412437,
+          "candidate_nearest_surface_m": 0.02206639014184475,
+          "absolute_nearest_surface_distance_change_m": 0.000933721661567688
+        }
+      ],
+      "joint_frame_anchor_check_scope": "Local URDF joint-frame positions compared to nearest surfaces; surface distance does not prove an assembled mechanical connection or preserve interior bores.",
+      "source_topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 6,
+        "same_direction_shared_edges": 0
+      },
+      "envelope_voxel_size_m": 0.002,
+      "source_topology_scope": "Binary STL after finite/area/duplicate cleanup and weld1e-7/local coplanar merge; not raw unindexed STL topology.",
+      "base_allocated_triangle_budget": 146,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "minimum_exported_avg_corner_normal_dot_face_normal": 0.8899840662977785,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "minimum_exported_triangle_area_m2": 4.647991926292089e-05
+    },
+    "logo_link": {
+      "triangles": 0,
+      "instances": 1,
+      "vehicle_triangles": 0,
+      "links": [
+        "logo_link"
+      ],
+      "source_triangles": 2908,
+      "source_cleaned_triangles": 2908,
+      "source_bounds_m": [
+        [
+          -0.07349999994039536,
+          -0.07089097797870636,
+          0.32747596502304077
+        ],
+        [
+          0.07349999994039536,
+          0.07351072132587433,
+          0.4113055169582367
+        ]
+      ],
+      "source_surface_area_m2": 0.014894624952738536,
+      "source_bbox_volume_m3": 0.001779454072010388,
+      "source_role_floor": 0,
+      "material_groups": 0,
+      "rgba_srgb": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uri": "package://h1_description/meshes/lod1500/logo_link.dae",
+      "bytes": 452,
+      "sha256": "bb262e3dd79f675423336510e35760ef67fc29be8dab858919bd692a2db0cd1d",
+      "method": "decorative_lettering_omitted_empty_visual_mesh",
+      "semantic_role": "logo",
+      "allocated_triangle_budget": 0,
+      "finite_coordinates_and_unit_normals": true,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "known_loss": "Decorative source logo entirely omitted, keeping the original link/joint/visual contract.",
+      "base_allocated_triangle_budget": 0,
+      "finger_connection_preservation_budget_override_from_medium": false,
+      "exported_indices_in_range": true,
+      "exported_unit_normals_and_finite_coordinates": true,
+      "exported_degenerate_triangles": 0,
+      "exported_duplicate_triangles": 0,
+      "empty_visual_is_intentional_decorative_logo_omission": true
+    }
+  },
+  "primitive_triangles": 0,
+  "primitives": [],
+  "material_policy": "URDF STL visual sRGB colour embedded as Lambert DAE; Lichtblick converts Lambert to Standard roughness1/dithering, matching source STL marker material.",
+  "allocation_method": "Per-link semantic minimum plus source surface-area/bounding-box-area weights; source face density does not determine the allocation.",
+  "simplification_losses": [
+    "Local curved shells and round joints become coarser; small fastener bores, bevels and interior CAD relief may disappear.",
+    "Each original visual link remains independently positioned and articulated; no link/axis/joint/visual-origin merge.",
+    "Local voxel union removes internal shell layers/small fasteners and approximates source surfaces at the reported voxel resolution.",
+    "Decorative lettering is omitted in all three tiers; its original link/visual remains as an intentional empty DAE scene.",
+    "Low-tier finger links retain the medium-tier per-link budget to avoid the visible joint-end retreat found in the first low prototype; other low body budgets remain unchanged."
+  ],
+  "preserved_existing_assets_sha256": {
+    "package.xml": "cad74ac4cba05c309e347041491c60c2dc33bdca2c477b0c90f11722fc650493",
+    "CMakeLists.txt": "22052c01c9cdc88870b28c335aa61b7bf60aa5cd8097477618e858521eeca04c",
+    "ASSET_SHA256SUMS": "136a972b59dae7f474ef5e963de91fe67295b56d5da0b4bfcce574d0fcc050e1",
+    "README.md": "433b9b18ac5855b5e26205c56b41b7461f065bc55243f495b7ef9a7479c54b9a",
+    "MODEL_ASSET_NOTICE.md": "0e4c46892018513e7cb28b55e74520be2499d6990a1acea36403dda8a2ad1c52",
+    ".gitignore": "71e3029c0042e7afa67b2642a9966e71dbaaedf0fea7b40cfa688b28a8cd844c",
+    "LICENSE": "3cf65b9355d841eb15850397ae41496a255663a36271e6b4a4351920c752c7f2",
+    "test/test_visual_assets.py": "a2ee0eb41629520dc01e7531ec0de3b7597d76ee8baf10366e1a86bff32f3a94",
+    ".xgc2/product.yml": "84c650410154fb5f4b2cf05f1b76fefcf1e65556341d68aee3a33143af24a8bd",
+    "urdf/h1_visual.urdf": "795e0e69c5795a2a5773ecb918b01dde5d2b437f0087794a0f130a95ec0bc5d7",
+    "meshes/right_knee_link.STL": "6183abbaef2afc775c220853e403b8479022a99954dbeef829b39d71916ddeda",
+    "meshes/right_shoulder_roll_link.STL": "b9e793e351e09027d27427c06df2c1cb6b37c0205d0f68686b0d73916c6821de",
+    "meshes/left_hip_roll_link.STL": "8ed880cf1171e048cfe50489fe2546c32790ac0c24a2b3b4c560495401013552",
+    "meshes/left_ankle_link.STL": "2d403f5414764e600af95d96eaee8ab7e49d2c7f75c1ae3dbbde052d4a14ffa1",
+    "meshes/right_hip_roll_link.STL": "3e95b01b0a215e1d134545d4073cf7a72ab38ca33e35c606c03f1706d63588c6",
+    "meshes/left_hip_pitch_link.STL": "aa790c31ffc100cd182f2bf4480e7bfda675edc58ed8f361b6553a4975c9de3b",
+    "meshes/left_knee_link.STL": "efda8a6c54406c788102c0d6e59ea95e24114607bc2da9a2bf7f287ef7e48109",
+    "meshes/left_shoulder_roll_link.STL": "8d3bcf767d72a9a5d7dae539eae79dc4132f0159b8803a6f6f2f9ad4b7e94d19",
+    "meshes/right_shoulder_pitch_link.STL": "850ffa7321993bfadcdb8bab1d422239f6a20abe27daa5ef99622f55d4da3217",
+    "meshes/pelvis.STL": "dc2cbbeb07d3b63bce9fedeb8cf5252609dca1e89380734d22d5b3c8ded2f15c",
+    "meshes/logo_link.STL": "ef9635c847ca7cd61aeaed86ad599935b648fb6f8688867c0448917b1811511b",
+    "meshes/right_elbow_link.STL": "bc1b2aa33cffda279b3e6a40b5b932b86de9cce6c41f0c0d860b442e81edcdc2",
+    "meshes/right_ankle_link.STL": "b39f5b3245926e935b9b37bdf25080d482d3be921aa5d70e01fe5f29ef70910a",
+    "meshes/right_hip_pitch_link.STL": "3c0300dd96432f218857886007e9d4e8be038cd8b85e04e84a59df4de7f90476",
+    "meshes/left_elbow_link.STL": "5ccf9bc83a751c1965b692e75534e57ee3c8a0916cbcff2ccccd8fe2b9d818d7",
+    "meshes/right_hip_yaw_link.STL": "10badbb0ac78e22fc220f421b1c919cfcf59406b412d78313e4b8b06cbc51e47",
+    "meshes/left_hip_yaw_link.STL": "103a854e684b84e1baba7d073822079069c64d0fa7b1592f29d38bd29f545bfb",
+    "meshes/torso_link.STL": "3ab785cbfbd851b0e9c59a46871aabc4718f3f8e726e21a2d14360d217ec7ba8",
+    "meshes/left_shoulder_yaw_link.STL": "e22a5b53f8f307e6c5d6c17f9ceae4852c6468547a951cb39dfdec9ee414b515",
+    "meshes/left_shoulder_pitch_link.STL": "42e1db49464ca0f44f933114ee426e7f6d6310d20cf104bfa38b5ed4794cfab7",
+    "meshes/right_shoulder_yaw_link.STL": "0c9e4bec895f24c07fb2c4d132fc5e3cc7146155547267e9c270789af6567781",
+    ".github/workflows/ci-bootstrap-gate.yml": "1de6f0e0a650992afd5f16aaab3544b3649dfefc62146acf0e6e3584b947c368",
+    ".github/workflows/ci.yml": "a648770197a42e7c67bfade1b262807a526937876217b37198c4c0c4570485ec",
+    ".github/workflows/release.yml": "7587bb5b6d1d3dc89180a37a9c7630f9916f1fb814716c648f827a0c6d514ca3",
+    ".xgc2/scripts/check_package_compliance.sh": "8df3f5ac76a56c06378ec703d577a9be22de5f3ad7fce7b2a9ca321f071eb736",
+    ".xgc2/scripts/package_debs.sh": "ded29d299123559eb8cd86180d601d6f64420d612b486de87dc4db4ff3e15aeb",
+    ".xgc2/scripts/build_debs_in_docker.sh": "ec4ebc32dfa99256a7a15e21e0f46b3559f9d5d2526fe63530a133d9f171eb7c",
+    ".xgc2/scripts/xgc2_artifact_manifest.py": "c29a04695aa2d55429f502b00009147301d90a1a448285e075ee1bb66a72b294",
+    ".xgc2/scripts/check_installed_packages.sh": "d38767ab5381debcb8d0d9e5210d5ca89422fca8cb662a05849421d903b2e180"
+  },
+  "triangle_target_overshoot": 0,
+  "vehicle_triangles": 2974,
+  "vehicle_material_groups": 20,
+  "unique_mesh_bytes": 312570,
+  "mesh_file_bytes": 312570,
+  "all_links_and_non_visual_xml_unchanged": true,
+  "only_visual_mesh_uri_changed": true,
+  "source_assets_unchanged": true,
+  "original_existing_files_unchanged": true,
+  "verification_scope": "Exported coordinates/normals/winding and unchanged source/URDF contracts; all non-decoration candidate visual shells closed. Source topology reported separately. Same-camera pixel QA pending."
+}

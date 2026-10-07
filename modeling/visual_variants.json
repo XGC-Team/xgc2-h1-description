@@ -1,0 +1,40 @@
+{
+  "robot": "h1",
+  "release_visual": "reference",
+  "hard_vehicle_triangle_cap": null,
+  "default_urdf_unchanged": "urdf/h1_visual.urdf",
+  "lod_tiers": {
+    "high": "lod10k",
+    "medium": "lod_medium",
+    "low": "lod1500"
+  },
+  "variants": {
+    "reference": {
+      "urdf": "urdf/h1_visual.urdf",
+      "vehicle_triangles": 282924,
+      "status": "original_reference"
+    },
+    "lod10k": {
+      "role": "lod_high",
+      "status": "component_comparison_complete_runtime_acceptance_pending",
+      "urdf": "urdf/h1_visual_lod10k.urdf",
+      "vehicle_triangles": 9774,
+      "nominal_vehicle_triangle_budget": 10000
+    },
+    "lod_medium": {
+      "role": "lod_medium",
+      "status": "component_comparison_complete_runtime_acceptance_pending",
+      "urdf": "urdf/h1_visual_lod_medium.urdf",
+      "vehicle_triangles": 4950,
+      "nominal_vehicle_triangle_budget": 5000
+    },
+    "lod1500": {
+      "role": "lod_low",
+      "status": "component_comparison_complete_runtime_acceptance_pending",
+      "urdf": "urdf/h1_visual_lod1500.urdf",
+      "vehicle_triangles": 2974,
+      "nominal_vehicle_triangle_budget": 1500,
+      "hard_vehicle_triangle_cap": null
+    }
+  }
+}

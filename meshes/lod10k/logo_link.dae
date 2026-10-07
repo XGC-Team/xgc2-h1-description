@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <created>2026-10-07T00:00:00Z</created>
+    <modified>2026-10-07T00:00:00Z</modified>
+    <unit name="metre" meter="1" />
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_visual_scenes>
+    <visual_scene id="scene" />
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#scene" />
+  </scene>
+</COLLADA>
